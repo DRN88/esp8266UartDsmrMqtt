@@ -195,3 +195,7 @@ Zabbix
 
 <a href="src/zabbix2.png"><img src="src/zabbix2.png" width="50%"></a><br/>
 <a href="src/zabbix3.png"><img src="src/zabbix3.png" width="50%"></a><br/>
+
+## 5. Get me a coffee :)
+
+[BTC](src/binance-btc.png) [ETHER](src/binance-ether.png) [TETHER](src/binance-tether.png)
