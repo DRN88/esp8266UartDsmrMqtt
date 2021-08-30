@@ -200,4 +200,4 @@ Zabbix
 
 Binance Pay
 
-<a href="src/binancepay.jpg"><img src="src/binancepay.jpg" width="50%"></a><br/>
+<a href="src/binancepay.png"><img src="src/binancepay.png" width="50%"></a><br/>
