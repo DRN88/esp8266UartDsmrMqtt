@@ -175,23 +175,23 @@ esptool --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=4MB -fm dio 0
 
 ### Hardware
 
-<a href="src/adapterCircuit1.png"><img src="src/adapterCircuit1.png" width="30%"></a><br/>
-<a href="src/hardwareItems.jpg"><img src="src/hardwareItems.jpg" width="30%"></a><br/>
-<a href="src/circuit1.jpg"><img src="src/circuit1.jpg" width="30%"></a><br/>
-<a href="src/circuit2.jpg"><img src="src/circuit2.jpg" width="30%"></a><br/>
-<a href="src/circuit4.jpg"><img src="src/circuit4.jpg" width="30%"></a><br/>
-<a href="src/circuit5.jpg"><img src="src/circuit5.jpg" width="30%"></a><br/>
-<a href="src/circuit3.jpg"><img src="src/circuit3.jpg" width="30%"></a><br/>
-<a href="src/circuit6.jpg"><img src="src/circuit6.jpg" width="30%"></a><br/>
-<a href="src/smartMeterWithCircuit1.jpg"><img src="src/smartMeterWithCircuit1.jpg" width="30%"></a><br/>
+<a href="src/adapterCircuit1.png"><img src="src/adapterCircuit1.png" width="50%"></a><br/>
+<a href="src/hardwareItems.jpg"><img src="src/hardwareItems.jpg" width="50%"></a><br/>
+<a href="src/circuit1.jpg"><img src="src/circuit1.jpg" width="50%"></a><br/>
+<a href="src/circuit2.jpg"><img src="src/circuit2.jpg" width="50%"></a><br/>
+<a href="src/circuit4.jpg"><img src="src/circuit4.jpg" width="50%"></a><br/>
+<a href="src/circuit5.jpg"><img src="src/circuit5.jpg" width="50%"></a><br/>
+<a href="src/circuit3.jpg"><img src="src/circuit3.jpg" width="50%"></a><br/>
+<a href="src/circuit6.jpg"><img src="src/circuit6.jpg" width="50%"></a><br/>
+<a href="src/smartMeterWithCircuit1.jpg"><img src="src/smartMeterWithCircuit1.jpg" width="50%"></a><br/>
 
 ### Software
 
 Android MQTT IoT
 
-<a href="src/androidMqtt.jpg"><img src="src/androidMqtt.jpg" width="30%"></a><br/>
+<a href="src/androidMqtt.jpg"><img src="src/androidMqtt.jpg" width="50%"></a><br/>
 
 Zabbix
 
-<a href="src/zabbix2.png"><img src="src/zabbix2.png" width="30%"></a><br/>
-<a href="src/zabbix3.png"><img src="src/zabbix3.png" width="30%"></a><br/>
+<a href="src/zabbix2.png"><img src="src/zabbix2.png" width="50%"></a><br/>
+<a href="src/zabbix3.png"><img src="src/zabbix3.png" width="50%"></a><br/>
