@@ -125,7 +125,7 @@ I used this circiut from Tasmota docs: https://tasmota.github.io/docs/P1-Smart-M
 
 ## 3. Compile micropython with our python scripts
 
-**Setup your build environment first!** Check this repo: micropythonbuild/Readme.md
+**Setup your build environment first!** Check this repo: [micropythonbuild/README.md](micropythonbuild/README.md)
 
 * Drop your edited files from `sourcecode` to `~/micropython/ports/esp8266/modules`
 * Build micropython esp8266 port
