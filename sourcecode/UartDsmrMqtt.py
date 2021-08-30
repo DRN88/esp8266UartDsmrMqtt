@@ -60,7 +60,7 @@ class UartDsmrMqtt:
 
 
     #
-    # Generate 1 burst of fake data, every 5 seconds
+    # Generate 1 burst of fake data, every X seconds
     # This way you can still have your REPL attached to UART0 so you can debug code (dupterm)
     # Notice, these are "bytestrings"
     #
@@ -113,8 +113,7 @@ class UartDsmrMqtt:
 
 
     #
-    # UART to Queue 
-    # if _uartParsingEnabled then try to readline data from uart
+    # UART to Queue
     #
     async def task_uartDataToQueue(self):
         lastObis = self._lastObis
