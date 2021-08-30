@@ -198,4 +198,6 @@ Zabbix
 
 ## 5. Get me a coffee :)
 
-![BTC](src/binance-btc.png) ![ETHEREUM](src/binance-ethereum.png) ![TETHER](src/binance-tether.png)
+Binance Pay
+
+![BinancePay](src/binance-pay.png)
