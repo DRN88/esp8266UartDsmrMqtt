@@ -1,0 +1,436 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-08-30T16:14:36Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 718c92f5a2174fa99f83d62b645e9252
+      template: 'DSMR Sanxing SX601'
+      name: 'DSMR Sanxing SX601'
+      description: 'Sanxing SX601 (S12U16) smart meter monitoring'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: fe74b72000e84f3db50d02e2cfa8ec12
+          name: Frekvencia
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/frequency",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: Hz
+          description: '"obis";"1-0:14.7.0"'
+        -
+          uuid: 027ec82ccb8546d9a819ea06d6308098
+          name: 'Pillanatnyi áram L1'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: A
+          description: '"obis";"1-0:31.7.0"'
+        -
+          uuid: e0c52479011b415592b6238f173c00b0
+          name: 'Pillanatnyi áram L2'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: A
+          description: '"obis";"1-0:51.7.0"'
+        -
+          uuid: 843be94a4d0d48108a64f1ccda9b20c1
+          name: 'Pillanatnyi áram L3'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: A
+          description: '"obis";"1-0:71.7.0"'
+        -
+          uuid: 8fd6681b8dbe46d09e6ab04163984e90
+          name: 'Pillanatnyi fázis feszültség L1'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: V
+          description: '"obis";"1-0:32.7.0"'
+        -
+          uuid: a247f246ae8a4cad85a2a6fe0fe56ddf
+          name: 'Pillanatnyi fázis feszültség L2'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: V
+          description: '"obis";"1-0:52.7.0"'
+        -
+          uuid: 5d9c9a5d94e74c2a923988e36f8cd1e9
+          name: 'Pillanatnyi fázis feszültség L3'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: V
+          description: '"obis";"1-0:72.7.0"'
+        -
+          uuid: 1e43addecef84b4f94284941ff4e0000
+          name: 'Pillanatnyi export teljesítmény (-A)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_active_instantaneous_power",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kW
+          description: '"obis";"1-0:2.7.0"'
+        -
+          uuid: 5fb7bc3150bc4e1e85dcbd121d394e45
+          name: 'Hatásos export energia (-A) - tarifa 1'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:2.8.1"'
+        -
+          uuid: 3beb350c391e4133bf33d5121834f1a6
+          name: 'Hatásos export energia (-A) - tarifa 2'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:2.8.2"'
+        -
+          uuid: eab05132c73148eb87b6c2e6c1a4f5f5
+          name: 'Hatásos export energia (-A) - tarifa 3'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:2.8.3"'
+        -
+          uuid: 78b1dfaad62644bda8c0430bc4c6ec0f
+          name: 'Hatásos export energia (-A) - tarifa 4'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_4",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:2.8.4"'
+        -
+          uuid: cd9abf244c86495d82ac9b2fed4558a6
+          name: 'Hatásos export energia (-A)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:2.8.0"'
+        -
+          uuid: 000dbded0a1449debe04a3a5cdacad71
+          name: 'Export meddő energia (-R)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_reactive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kvarh
+          description: '"obis";"1-0:4.8.0"'
+        -
+          uuid: a7b53b768b164b33bb88b12b8dffb2ba
+          name: 'Pillanatnyi import teljesítmény (+A)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_active_instantaneous_power",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kW
+          description: '"obis";"1-0:1.7.0"'
+        -
+          uuid: 001c8671c5fa4171bce68953c14fab81
+          name: 'Hatásos import energia (+A) tarifa 1'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:1.8.1"'
+        -
+          uuid: 4aefe9e0b4914013a0c463cc3b5c2f3b
+          name: 'Hatásos import energia (+A) tarifa 2'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:1.8.2"'
+        -
+          uuid: bc0290a0d23e415586fb6de8c1eb4061
+          name: 'Hatásos import energia (+A) tarifa 3'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:1.8.3"'
+        -
+          uuid: a6f81f3740724500ba83696546e6c486
+          name: 'Hatásos import energia (+A) tarifa 4'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_4",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:1.8.4"'
+        -
+          uuid: 7225ab64eb7d4770981e8babb89acdde
+          name: 'Hatásos import energia (+A)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kWh
+          description: '"obis";"1-0:1.8.0"'
+        -
+          uuid: b8735efc33ef45d7a82a2dcf44aeeb12
+          name: 'Import meddő energia összesen (+R)'
+          type: ZABBIX_ACTIVE
+          key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_reactive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+          delay: '0'
+          trends: 3650d
+          value_type: FLOAT
+          units: kvarh
+          description: '"obis";"1-0:3.8.0"'
+        -
+          uuid: d111b0471932402eb612939c3578ff66
+          name: 'Hatásos export-import [(-A)-(+A)]'
+          type: CALCULATED
+          key: sanxingdsmr.negative_energy_total_minus_positive_energy_total
+          delay: 10s
+          trends: 3650d
+          units: kWh
+          params: 'last(//mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]) - last(//mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}])'
+        -
+          uuid: 3c961fc4351d489dac5ebf696d6eb5b2
+          name: 'Hatásos (export/import) % arány energia [((-A)/(+A))*100]'
+          type: CALCULATED
+          key: sanxingdsmr.negative_energy_total_positive_energy_total_percentage
+          delay: 10s
+          trends: 3650d
+          units: '%'
+          params: '100*(last(//mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]) / last(//mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]))'
+      dashboards:
+        -
+          uuid: 72c4f4e0e2d14b7b90e743e0c0e1c3ff
+          name: 'Sanxing DSMR Dashboard'
+          pages:
+            -
+              widgets:
+                -
+                  type: GRAPH_CLASSIC
+                  width: '9'
+                  height: '8'
+                  fields:
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Pillanatnyi export és import teljesítmény'
+                        host: 'DSMR Sanxing SX601'
+                -
+                  type: GRAPH_CLASSIC
+                  x: '9'
+                  width: '9'
+                  height: '8'
+                  fields:
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Hatásos (export/import) % arány energia [((-A)/(+A))*100]'
+                        host: 'DSMR Sanxing SX601'
+  graphs:
+    -
+      uuid: ea8a0bd2d5db4834a6e4fff19aa94406
+      name: Frekvencia
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          color: 00FFFF
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/frequency",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: b714a3b5bf344f63b9bd2364c2661a33
+      name: 'Hatásos (export-import) energia [(-A)-(+A)]'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          drawtype: FILLED_REGION
+          color: 199C0D
+          calc_fnc: ALL
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: sanxingdsmr.negative_energy_total_minus_positive_energy_total
+    -
+      uuid: 211caa698517418eb7019a7bc762fd01
+      name: 'Hatásos (export/import) % arány energia [((-A)/(+A))*100]'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          drawtype: FILLED_REGION
+          color: 199C0D
+          calc_fnc: ALL
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: sanxingdsmr.negative_energy_total_positive_energy_total_percentage
+    -
+      uuid: ef251b9d559f4f71987520783f105057
+      name: 'Hatásos export energia (-A) tarifa 1-2'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          color: 199C0D
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          color: F63100
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_tariff_2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: 5aa8e115f2c3444fa7a8975f31c189ef
+      name: 'Hatásos export és import energia'
+      height: '500'
+      type: STACKED
+      graph_items:
+        -
+          sortorder: '1'
+          color: F63100
+          calc_fnc: MAX
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_energy_total",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: 17cb5fe488e94e65b54ffda34a26ac28
+      name: 'Hatásos import energia (+A) tarifa 1-2'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          color: FC6EA3
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          color: F63100
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_energy_tariff_2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: 17fa661c834a434781c285d412fabe8a
+      name: 'Pillanatnyi export és import teljesítmény'
+      height: '500'
+      show_work_period: 'NO'
+      show_triggers: 'NO'
+      graph_items:
+        -
+          sortorder: '1'
+          drawtype: FILLED_REGION
+          color: 199C0D
+          calc_fnc: ALL
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/negative_active_instantaneous_power",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          drawtype: FILLED_REGION
+          color: F63100
+          calc_fnc: ALL
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/positive_active_instantaneous_power",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: 0a51a2e28d8d41458f9e33b09820cbb9
+      name: 'Pillanatnyi fázis feszültségek'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          color: 00FFFF
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          color: BFFF00
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '3'
+          color: FF8000
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_voltage_in_phase_L3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+    -
+      uuid: ce8c806414494c5a9ae5b1d12967987d
+      name: 'Pillanatnyi áram'
+      height: '500'
+      graph_items:
+        -
+          sortorder: '1'
+          color: 00FF00
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L1",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '2'
+          color: FFFF00
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L2",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
+        -
+          sortorder: '3'
+          color: FF4000
+          item:
+            host: 'DSMR Sanxing SX601'
+            key: 'mqtt.get[{$DSMR_MQTT_SERVERURL},"home/basement/smartmeter/instantaneous_current_in_phase_L3",{$DSMR_MQTT_USERNAME},{$DSMR_MQTT_PASSWORD}]'
